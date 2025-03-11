@@ -1,41 +1,100 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MiListView());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Perea ListView, Mat:22308051281272'),
+          backgroundColor: Colors.blue,
+          titleTextStyle: TextStyle(
+            fontSize: 18, // Tamaño de fuente más pequeño
+            fontWeight: FontWeight.bold,
+            color: Color(0xff000000), // Color del texto
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment
+                .stretch, // Para que los botones ocupen todo el ancho
+            children: [
+              Center(
+                // Centrar el texto
+                child: Text(
+                  'Which Technology is Good?',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Color de fondo del botón
+                  foregroundColor:
+                      Colors.white, // Color del texto dentro del botón
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(20.0), // Bordes más redondeados
+                  ),
+                  minimumSize: Size(double.infinity, 50), // Botones más largos
+                ),
+                child: Text('IOS'),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Color de fondo del botón
+                  foregroundColor:
+                      Colors.white, // Color del texto dentro del botón
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(20.0), // Bordes más redondeados
+                  ),
+                  minimumSize: Size(double.infinity, 50), // Botones más largos
+                ),
+                child: Text('Android'),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Color de fondo del botón
+                  foregroundColor:
+                      Colors.white, // Color del texto dentro del botón
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(20.0), // Bordes más redondeados
+                  ),
+                  minimumSize: Size(double.infinity, 50), // Botones más largos
+                ),
+                child: Text('Flutter'),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue, // Color de fondo del botón
+                  foregroundColor:
+                      Colors.white, // Color del texto dentro del botón
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(20.0), // Bordes más redondeados
+                  ),
+                  minimumSize: Size(double.infinity, 50), // Botones más largos
+                ),
+                child: Text('Project native'),
+              ),
+            ],
+          ),
         ),
       ),
     );
